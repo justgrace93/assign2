@@ -261,12 +261,39 @@ void keyPressed() {
              break;
       }
     }
-    if(key==ENTER /*still needs something*/){
+    
+    if(key==ENTER){
+      switch(gameState)
+      {
+        case GAME_START:
       gameState = GAME_RUN;
       life=3;
       frogX = frogInitX;
       frogY = frogInitY;
+         break; 
+         
+        case GAME_WIN:
+      gameState = GAME_RUN;
+      life=3;
+      frogX = frogInitX;
+      frogY = frogInitY;
+          break;
+          
+        case GAME_LOSE:
+      gameState = GAME_RUN;
+      life=3;
+      frogX = frogInitX;
+      frogY = frogInitY;
+          break;
+          
+        case GAME_RUN:
+          break;
+          
+        case FROG_DIE:
+          break;
+
     }
+}
 }
 void keyReleased() {
   if (key == CODED) {
