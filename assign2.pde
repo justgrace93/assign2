@@ -231,7 +231,7 @@ void draw(){
         text("You Win !!",240,height/4);
         break;
     case GAME_LOSE:
-        delay(1000);
+        
         background(0);
         image(imgLoseFrog,189,160);
         fill(255);
